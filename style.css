@@ -136,9 +136,11 @@ body {
   0%,
   100% {
     box-shadow: 0 0 20px 5px var(--light-red);
+    background-color: var(--light-red);
   }
   50% {
     box-shadow: none;
+    background-color: var(--light-off);
   }
 }
 
@@ -146,9 +148,11 @@ body {
   0%,
   100% {
     box-shadow: none;
+    background-color: var(--light-off);
   }
   50% {
     box-shadow: 0 0 20px 5px var(--light-yellow);
+    background-color: var(--light-yellow);
   }
 }
 
@@ -156,9 +160,11 @@ body {
   0%,
   100% {
     box-shadow: 0 0 20px 5px var(--light-blue);
+    background-color: var(--light-blue);
   }
   50% {
     box-shadow: none;
+    background-color: var(--light-off);
   }
 }
 
@@ -166,9 +172,11 @@ body {
   0%,
   100% {
     box-shadow: none;
+    background-color: var(--light-off);
   }
   50% {
     box-shadow: 0 0 20px 5px var(--light-green);
+    background-color: var(--light-green);
   }
 }
 
