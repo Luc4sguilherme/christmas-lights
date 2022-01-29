@@ -77,6 +77,7 @@ body {
   height: 18.67px;
   border-bottom: solid #222 2px;
   border-radius: 50%;
+  z-index: -10;
 }
 
 .light:last-child {
