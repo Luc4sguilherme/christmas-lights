@@ -1,0 +1,193 @@
+:root {
+  --light-red: #c0392b;
+  --light-yellow: #f1c40f;
+  --light-blue: #64fcfe;
+  --light-green: #2ecc71;
+  --light-off: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #fff;
+  font-family: "Cinzel", sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 15px white;
+  animation: title-glow 1s infinite;
+}
+
+.app {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lightsrope {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+.light {
+  width: 15px;
+  height: 40px;
+  position: relative;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  margin-right: 40px;
+  transition: 1s all ease;
+}
+
+.light::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  display: block;
+  background: rgb(68, 53, 73);
+  border-radius: 2px;
+  display: inline-block;
+  border-bottom: 2px solid rgb(97, 81, 107);
+}
+
+.light:not(:last-child)::after {
+  content: "";
+  top: -10px;
+  left: 5px;
+  position: absolute;
+  width: 70px;
+  height: 18.67px;
+  border-bottom: solid #222 2px;
+  border-radius: 50%;
+}
+
+.light:last-child {
+  margin-right: 0px;
+}
+
+.control-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 140px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border: #563260 2px solid;
+  border-radius: 60px;
+  color: #fff;
+  background: #000;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  outline: none;
+  background: rgb(184, 134, 222);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.red {
+  background-color: var(--light-red);
+  animation: red-glow 1s infinite;
+}
+
+.yellow {
+  background-color: var(--light-yellow);
+  animation: yellow-glow 1s infinite;
+}
+
+.blue {
+  background-color: var(--light-blue);
+  animation: blue-glow 1s infinite;
+}
+
+.green {
+  background-color: var(--light-green);
+  animation: green-glow 1s infinite;
+}
+
+.off {
+  background: var(--light-off);
+  animation: none;
+}
+
+@keyframes red-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px var(--light-red);
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes yellow-glow {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px var(--light-yellow);
+  }
+}
+
+@keyframes blue-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px var(--light-blue);
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes green-glow {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px var(--light-green);
+  }
+}
+
+@keyframes title-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px var(--light-red),
+      0 0 60px var(--light-red), 0 0 70px var(--light-red);
+  }
+  25% {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--light-yellow), 0 0 40px #ff4da6, 0 0 50px var(--light-yellow),
+      0 0 60px var(--light-yellow), 0 0 70px var(--light-yellow), 0 0 80px #ff4da6;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--light-blue), 0 0 40px var(--light-blue), 0 0 50px var(--light-blue),
+      0 0 60px var(--light-blue), 0 0 70px var(--light-blue), 0 0 80px var(--light-blue);
+  }
+  75% {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--light-green), 0 0 40px var(--light-green), 0 0 50px var(--light-green),
+      0 0 60px var(--light-green), 0 0 70px var(--light-green), 0 0 80px var(--light-green);
+  }
+}
